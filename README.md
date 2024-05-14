@@ -1,6 +1,6 @@
 ## Installation
 #### Create venv and use pip to install packages in project
-pip install -r requirements.txt
+```python pip install -r requirements.txt ```
 
 #### Configure the postgres database in the settings.py file and mekemigration and migrate:
 python manage.py makemigrations
