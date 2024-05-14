@@ -5,8 +5,12 @@ python pip install -r requirements.txt
 ```
 
 #### Configure the postgres database in the settings.py file and mekemigration and migrate:
+```python
 python manage.py makemigrations
 python manage.py migrate
+```
 
 #### Run project
+```python
 python manage.py runserver
+```
