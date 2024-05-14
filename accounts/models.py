@@ -76,7 +76,7 @@ class FollowRequest(TimeStamp):
     def response_to_follow_request(self, response):
         if response == 'Accept':
             self._accept_follower()
-        elif response == 'Requesting':
+        elif response == 'Reject':
             self._reject_follower()
 
     def _accept_follower(self):
