@@ -33,7 +33,7 @@ class CreatePostAPIView(GenericAPIView):
             return Response(f'Number of files should be between 1 and 10. Received {files_count} files.', status=status.HTTP_401_UNAUTHORIZED)
         for file in files:
             if File(file=file).file_type() == 'unacceptable':
-                return Response('File type is not acceptable', status=400)
+                return Response('File type is not acceptable', status=status.HTTP_400_BAD_REQUEST)
         post = Post.objects.create(user=request.user, caption=caption)
         File.objects.bulk_create([File(file=file, post=post) for file in files])
         return Response('Post created.', status=status.HTTP_201_CREATED)
